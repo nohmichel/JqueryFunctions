@@ -1,0 +1,170 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   		<head>
+            <title>JQuery Methods</title>
+   			<link rel="stylesheet" href="stylesheet.css">
+   			<!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+            <script defer src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+			
+   		</head>
+   		<body>
+             <div class="container">  
+      			<div id="hs" class="directory"> 
+      				<div class="button">
+                     <button id="hide">Hide</button>
+                     <button id="show">Show</button>
+                  </div>
+                  <div class="content">
+         				<h1>Hide and Show</h1>
+                  	<p id="htext">Click the buttons to hide and show this text.</p>
+                  </div>
+   		    </div>
+   		    <div id="tg" class="directory"> 
+      				<div id="toggle" class="button">
+                     <button>Toggle</button>
+                  </div>
+                  <div class="content" class="directory">
+      				  <h1>Toggle </h1>
+      				  <p id="totext">Click on the button to hide() and show() this text.</p>
+                  </div>
+   		    </div>
+   		    <div id="updown" class="directory"> 
+      				<div class="button">
+                     <button id="slideup">SlideUp</button>
+         				<button id="slidedown">SlideDown</button>
+                  </div>
+                  <div class="content">
+         				<img src="UpDown.jpg" id="handsup" class="kitty" alt="Photo of kitten with paws up">
+         				<p>Click on the buttons to Slide Up and Down image</p>
+                  </div>
+   		    </div>
+   		       <div id="toggleUD" class="directory"> 
+                  <div class="kittyimg">
+                     <p id="stoggle">Click here to slidetoggle.</p>
+         				<img src="toggleupdown.jpg" id="kcarpet" class="kitty" alt="Photo of kitten on carpet">
+         			</div>  
+   		       </div>
+   		       <div id="fade" class="directory"> 
+      				<div class="button">
+                     <button id="fin">FadeIn</button>
+         				<button id="fout">FadeOut</button>
+                  </div>
+                  <div class="content">
+         				<img src="fade.jpg" id="angel" class="kitty" alt="Photto of kitty angel">
+         				<p id="ftext">Click on the buttons to FadeIn and FadeOut Kitten</p>
+                  </div>
+   		     </div>
+
+   		       <div id="addClass" class="directory"> 
+      				<div class="button">
+                     <button id="class">addClass</button>
+                  </div>
+                  <div class="content">
+                     <p class="class">Click on this button to add class"red" to this paragraph</p> 
+                  </div>
+      		   </div>
+
+      		   <div id="addtext" class="directory"> 
+      				<div class="button">
+                     <button id="before">Before</button>
+         				<button id="after">After</button>
+                  </div>
+                  <div class="content">
+         				<p id="new">Click on the buttons to add new paragraph. </p>
+                  </div>
+      		   </div>
+               <div id="app" class="directory"> 
+      				<div class="button">
+                     <button id="append">Append</button>         				
+                  </div>
+                  <div class="content">
+         				<p id="ap">Click buttons to append.</p>
+                  </div>
+      		   </div>
+      		   <div id="html" class="directory"> 
+      				<div class="button">
+                     <button id="change">HTML</button>
+                  </div>
+                  <div class="content" id="dir">
+         				<h1 id="kool"> Kittens Are Kool</h1>
+         				<p>Click on the button to change the content of the header.</p>
+                  </div>
+      			</div>
+      		   <div id="atr" class="directory"> 
+                  <div class="kittyimg">
+         				<img src="atr.jpg" id="stretch" alt="Photo of cat stretching">
+         				<p>Click the image to change the width attribute of the image</p>
+                  </div>              
+               </div>
+      		   <div id="value" class="text"> 
+      				<div class="content">
+                  <button id="val">Value of input</button>
+                  <p>Kitten Name: <input type="text" name="CName"></p>
+                  </div>
+      		   </div>
+      		    <div id="text" class="text">
+                     <h1>Text Elements</h1>
+                     <div class="content"> 
+                  	<button id="txt">Text</button>                         
+         				<p>Click the button to change all h1 elements</p>
+                     </div>
+      		   </div>
+            </div>   
+
+            <script>
+               $(document).ready(function(){
+                  $('#hide').click (function(){
+                     $('#htext').hide()
+                  });
+                  $('#show').click (function(){
+                     $('#htext').show()
+                  });   
+                  $('#toggle').click (function(){
+                     $('#totext').toggle()
+                  });
+                  $('#slideup').click (function(){
+                     $('#handsup').slideUp(); 
+                  });
+                  $('#slidedown').click (function(){
+                     $('#handsup').slideDown(); 
+                  });        
+                 $('#stoggle').click (function(){
+                     $('#kcarpet').slideToggle()
+                     });
+                 $('#fout').click(function(){
+                     $('#angel').fadeOut()
+                  });       
+                 $('#fin').click(function(){
+                     $('#angel').fadeIn()
+                  });
+                 $('#class').click (function(){ 
+                     $('.class').addClass ('red');
+                     }); 
+                 $('#before').click (function(){
+                     $('#new').before ('<b>Kittens Rule!</b>')
+                     });
+                  $('#after').click (function(){
+                     $('#new').after ('<b>Kittens Rule!</b>');
+                     });
+                 $('#append').click (function(){
+                     $('#ap').append ('<b> Cat!</b>')
+                     });                
+                 $('#change').click (function(){
+                     $('#kool').html('<b>Cats Rule!</b>') 
+                     });
+                 $('#val').click (function(){
+                     $('input').val ('Mochi')
+                     });
+                  $('#txt').click (function(){
+                     $('h1').text('Meow!');
+                     }); 
+                  $('#stretch').click (function(){   
+                     $('#stretch').attr('width', '250') 
+                     });   
+                  // I had issues executing the last method with an image. In the interest of time I will come back to this//
+                });         
+            </script>
+ 	       </body>
+</html>

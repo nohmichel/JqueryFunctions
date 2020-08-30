@@ -1,0 +1,59 @@
+* {
+/*outline: 1px dotted red;
+*/
+}
+
+.container {
+	width: 700px;
+	margin: auto;
+}
+
+.kitty {
+	width: 200px;
+	height: auto;
+}
+
+#stretch {
+	width: 200px;
+	height: auto;
+}
+
+.button {
+	width: 200px;
+	padding: 75px 0px 0px 80px;
+	display:inline-block;
+	vertical-align: top;
+
+}	
+
+.content {
+	width: 350px;
+	display: inline-block;
+	border-left-style: 2px solid black;
+	text-align: center;
+	font-weight: bold;
+}
+
+.kittyimg{
+	text-align: center;
+	font-weight: bold;
+}
+
+.directory {
+	outline: 2px solid black;
+	padding: 20px;
+}
+
+.text {
+	padding-top: 20px;
+	outline: 2px solid black;
+	text-align: center;
+
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+	text-decoration: underline;
+
+}
